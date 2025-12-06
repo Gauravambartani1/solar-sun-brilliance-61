@@ -3,16 +3,25 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/solar-sun-logo.png";
 
+const WHATSAPP_NUMBER = "918806660170";
+const PHONE_NUMBER = "+91 88066 60170";
+const WHATSAPP_MESSAGE = "Hi! I'm interested in getting a solar installation for my home in Amravati. Please share more details.";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "Services", href: "#services" },
+    { name: "Calculator", href: "#calculator" },
     { name: "Why Us", href: "#why-us" },
     { name: "Partners", href: "#partners" },
     { name: "Contact", href: "#contact" },
   ];
+
+  const handleGetQuote = () => {
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, "_blank");
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
@@ -38,11 +47,11 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="tel:+919999999999" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors">
+            <a href="tel:+918806660170" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors">
               <Phone className="h-4 w-4" />
-              <span className="font-medium">+91 99999 99999</span>
+              <span className="font-medium">{PHONE_NUMBER}</span>
             </a>
-            <Button variant="gold" size="lg">
+            <Button variant="gold" size="lg" onClick={handleGetQuote}>
               Get Free Quote
             </Button>
           </div>
@@ -75,7 +84,7 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <Button variant="gold" size="lg" className="mt-4">
+              <Button variant="gold" size="lg" className="mt-4" onClick={handleGetQuote}>
                 Get Free Quote
               </Button>
             </div>
