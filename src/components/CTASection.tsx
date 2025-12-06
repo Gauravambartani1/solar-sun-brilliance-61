@@ -1,7 +1,19 @@
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const WHATSAPP_NUMBER = "918806660170";
+const PHONE_NUMBER = "+91 88066 60170";
+const WHATSAPP_MESSAGE = "Hi! I'm interested in getting a solar installation for my home in Amravati. Please share more details.";
+
 const CTASection = () => {
+  const handleGetQuote = () => {
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`, "_blank");
+  };
+
+  const handleCallNow = () => {
+    window.open(`tel:+918806660170`, "_self");
+  };
+
   return (
     <section id="contact" className="py-24 bg-gradient-hero relative overflow-hidden">
       {/* Background Pattern */}
@@ -28,11 +40,11 @@ const CTASection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl">
+              <Button variant="hero" size="xl" onClick={handleGetQuote}>
                 Get Free Quote
                 <ArrowRight className="h-5 w-5" />
               </Button>
-              <Button variant="heroOutline" size="xl">
+              <Button variant="heroOutline" size="xl" onClick={handleCallNow}>
                 Call Us Now
               </Button>
             </div>
@@ -46,16 +58,16 @@ const CTASection = () => {
 
             <div className="space-y-6">
               <a
-                href="tel:+919999999999"
+                href="tel:+918806660170"
                 className="flex items-start gap-4 group"
               >
                 <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/30 transition-colors">
                   <Phone className="h-5 w-5 text-secondary" />
                 </div>
                 <div>
-                  <div className="text-primary-foreground/70 text-sm mb-1">Phone</div>
+                  <div className="text-primary-foreground/70 text-sm mb-1">Phone / WhatsApp</div>
                   <div className="text-primary-foreground font-semibold text-lg group-hover:text-secondary transition-colors">
-                    +91 99999 99999
+                    {PHONE_NUMBER}
                   </div>
                 </div>
               </a>
@@ -82,7 +94,7 @@ const CTASection = () => {
                 <div>
                   <div className="text-primary-foreground/70 text-sm mb-1">Office</div>
                   <div className="text-primary-foreground font-semibold text-lg">
-                    New Delhi, India
+                    Amravati, Maharashtra
                   </div>
                 </div>
               </div>

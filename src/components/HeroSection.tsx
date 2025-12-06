@@ -1,4 +1,4 @@
-import { ArrowRight, Sun, Zap, Shield } from "lucide-react";
+import { ArrowRight, Sun, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-solar.jpg";
 
@@ -40,24 +40,25 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <Button variant="hero" size="xl">
+            <Button 
+              variant="hero" 
+              size="xl"
+              onClick={() => window.open(`https://wa.me/918806660170?text=${encodeURIComponent("Hi! I'm interested in getting a solar installation for my home in Amravati. Please share more details.")}`, "_blank")}
+            >
               Get Free Consultation
               <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button variant="heroOutline" size="xl">
+            <Button 
+              variant="heroOutline" 
+              size="xl"
+              onClick={() => document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth" })}
+            >
               Calculate Savings
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <div className="text-center sm:text-left">
-              <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
-                <Zap className="h-5 w-5 text-secondary" />
-                <span className="text-2xl md:text-3xl font-bold text-primary-foreground">500+</span>
-              </div>
-              <p className="text-primary-foreground/70 text-sm">Installations</p>
-            </div>
+          <div className="grid grid-cols-2 gap-6 animate-slide-up" style={{ animationDelay: "0.3s" }}>
             <div className="text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
                 <Shield className="h-5 w-5 text-secondary" />

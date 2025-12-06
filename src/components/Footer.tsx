@@ -1,6 +1,8 @@
 import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/solar-sun-logo.png";
 
+const PHONE_NUMBER = "+91 88066 60170";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -12,7 +14,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <img src={logo} alt="Solar Sun Logo" className="h-16 w-auto mb-6 brightness-0 invert" />
             <p className="text-primary-foreground/70 mb-6 leading-relaxed">
-              Leading rooftop solar installation company committed to making 
+              Leading rooftop solar installation company in Amravati, committed to making 
               clean energy accessible for every home and business.
             </p>
             <div className="flex gap-4">
@@ -47,7 +49,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {["Home", "Services", "About Us", "Projects", "Contact"].map((link) => (
+              {["Home", "Services", "Calculator", "About Us", "Contact"].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(" ", "-")}`}
@@ -67,9 +69,9 @@ const Footer = () => {
               {[
                 "Residential Solar",
                 "Commercial Solar",
-                "Industrial Solar",
-                "Solar Maintenance",
-                "Subsidy Assistance",
+                "Loan Assistance",
+                "Subsidy Support",
+                "Free Maintenance",
               ].map((service) => (
                 <li key={service}>
                   <a
@@ -89,16 +91,20 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-secondary mt-0.5" />
-                <span className="text-primary-foreground/70">+91 99999 99999</span>
+                <a href="tel:+918806660170" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                  {PHONE_NUMBER}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-secondary mt-0.5" />
-                <span className="text-primary-foreground/70">info@solarsun.in</span>
+                <a href="mailto:info@solarsun.in" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                  info@solarsun.in
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-secondary mt-0.5" />
                 <span className="text-primary-foreground/70">
-                  New Delhi, India
+                  Amravati, Maharashtra
                 </span>
               </li>
             </ul>

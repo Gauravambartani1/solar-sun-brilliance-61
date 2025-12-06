@@ -1,4 +1,4 @@
-import { Home, Building2, Factory, Settings, ArrowRight } from "lucide-react";
+import { Home, Building2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
@@ -6,29 +6,26 @@ const services = [
     icon: Home,
     title: "Residential Solar",
     description: "Complete rooftop solar solutions for homes. Reduce your electricity bills by up to 90% with our premium installations.",
-    features: ["Net Metering Support", "Custom System Design", "25+ Year Panel Warranty"],
+    features: ["Net Metering Support", "Custom System Design", "25+ Year Panel Warranty", "3 Years Free Maintenance"],
   },
   {
     icon: Building2,
     title: "Commercial Solar",
     description: "Power your business with sustainable energy. Custom solar solutions designed for offices, shops, and commercial spaces.",
-    features: ["High-Capacity Systems", "ROI Analysis", "Tax Benefits Assistance"],
-  },
-  {
-    icon: Factory,
-    title: "Industrial Solar",
-    description: "Large-scale solar installations for factories and industrial units. Maximize savings on heavy electricity consumption.",
-    features: ["MW Scale Projects", "Grid Integration", "24/7 Monitoring"],
-  },
-  {
-    icon: Settings,
-    title: "AMC Services",
-    description: "Annual maintenance contracts to keep your solar system running at peak performance throughout its lifetime.",
-    features: ["Regular Cleaning", "Performance Checks", "Quick Repairs"],
+    features: ["High-Capacity Systems", "ROI Analysis", "Tax Benefits Assistance", "Subsidy Support"],
   },
 ];
 
+const WHATSAPP_NUMBER = "918806660170";
+
 const ServicesSection = () => {
+  const handleLearnMore = (serviceName: string) => {
+    const message = encodeURIComponent(
+      `Hi! I'm interested in ${serviceName} installation in Amravati. Please share more details.`
+    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
+  };
+
   return (
     <section id="services" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -41,14 +38,14 @@ const ServicesSection = () => {
             Comprehensive Solar Solutions
           </h2>
           <p className="text-muted-foreground text-lg">
-            From residential rooftops to large industrial plants, we provide end-to-end 
-            solar solutions tailored to your specific needs.
+            From residential rooftops to commercial spaces, we provide end-to-end 
+            solar solutions tailored to your specific needs in Amravati and surrounding areas.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {services.map((service) => (
             <div
               key={service.title}
               className="group relative bg-card rounded-2xl p-8 shadow-card transition-all duration-300 hover:shadow-elevated hover:-translate-y-1 border border-border overflow-hidden"
@@ -82,7 +79,11 @@ const ServicesSection = () => {
                 </ul>
 
                 {/* CTA */}
-                <Button variant="ghost" className="group/btn text-solar-navy hover:text-solar-navy p-0">
+                <Button 
+                  variant="ghost" 
+                  className="group/btn text-solar-navy hover:text-solar-navy p-0"
+                  onClick={() => handleLearnMore(service.title)}
+                >
                   Learn More
                   <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                 </Button>
