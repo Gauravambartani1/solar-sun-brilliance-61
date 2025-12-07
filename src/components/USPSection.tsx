@@ -27,7 +27,7 @@ const uspData = [
   },
   {
     icon: ShieldCheck,
-    title: "25+ Years Warranty",
+    title: "25 Years Warranty",
     description: "Industry-leading warranty on panels and inverters. Your investment is protected for decades.",
     highlight: false,
   },
