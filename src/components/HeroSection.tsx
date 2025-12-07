@@ -18,14 +18,6 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-secondary/20 backdrop-blur-sm border border-secondary/30 rounded-full px-4 py-2 mb-6 animate-fade-in">
-            <Sun className="h-4 w-4 text-secondary" />
-            <span className="text-primary-foreground/90 text-sm font-medium">
-              Trusted by 500+ Happy Customers
-            </span>
-          </div>
-
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight animate-slide-up">
             Power Your Home with{" "}
@@ -38,7 +30,7 @@ const HeroSection = () => {
             complete loan & subsidy support, and industry-leading panel technology.
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <Button 
               variant="hero" 
@@ -48,13 +40,6 @@ const HeroSection = () => {
               Get Free Consultation
               <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button 
-              variant="heroOutline" 
-              size="xl"
-              onClick={() => document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              Calculate Savings
-            </Button>
           </div>
 
           {/* Stats */}
@@ -62,7 +47,7 @@ const HeroSection = () => {
             <div className="text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
                 <Shield className="h-5 w-5 text-secondary" />
-                <span className="text-2xl md:text-3xl font-bold text-primary-foreground">25+</span>
+                <span className="text-2xl md:text-3xl font-bold text-primary-foreground">25</span>
               </div>
               <p className="text-primary-foreground/70 text-sm">Years Warranty</p>
             </div>
