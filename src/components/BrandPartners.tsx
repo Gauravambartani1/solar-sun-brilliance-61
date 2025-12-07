@@ -1,6 +1,8 @@
 const brands = [
   { name: "Adani", category: "Solar Panels" },
   { name: "Waaree", category: "Solar Panels" },
+  { name: "Tata", category: "Solar Panels" },
+  { name: "Panasonic", category: "Solar Panels" },
   { name: "Polycab", category: "Wires & Cables" },
   { name: "RR Kabel", category: "Wires & Cables" },
 ];

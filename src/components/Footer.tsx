@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/solar-sun-logo.png";
 
 const PHONE_NUMBER = "+91 88066 60170";
@@ -93,12 +93,6 @@ const Footer = () => {
                 <Phone className="h-5 w-5 text-secondary mt-0.5" />
                 <a href="tel:+918806660170" className="text-primary-foreground/70 hover:text-secondary transition-colors">
                   {PHONE_NUMBER}
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-secondary mt-0.5" />
-                <a href="mailto:info@solarsun.in" className="text-primary-foreground/70 hover:text-secondary transition-colors">
-                  info@solarsun.in
                 </a>
               </li>
               <li className="flex items-start gap-3">

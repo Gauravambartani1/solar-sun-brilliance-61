@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Phone, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WHATSAPP_NUMBER = "918806660170";
@@ -68,21 +68,6 @@ const CTASection = () => {
                   <div className="text-primary-foreground/70 text-sm mb-1">Phone / WhatsApp</div>
                   <div className="text-primary-foreground font-semibold text-lg group-hover:text-secondary transition-colors">
                     {PHONE_NUMBER}
-                  </div>
-                </div>
-              </a>
-
-              <a
-                href="mailto:info@solarsun.in"
-                className="flex items-start gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/30 transition-colors">
-                  <Mail className="h-5 w-5 text-secondary" />
-                </div>
-                <div>
-                  <div className="text-primary-foreground/70 text-sm mb-1">Email</div>
-                  <div className="text-primary-foreground font-semibold text-lg group-hover:text-secondary transition-colors">
-                    info@solarsun.in
                   </div>
                 </div>
               </a>

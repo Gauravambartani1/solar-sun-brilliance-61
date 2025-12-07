@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: "What size system do I need for my home?",
-    answer: "System size depends on your monthly electricity consumption. Typically: 3kW for bills up to ₹3,000/month, 4kW for ₹3,000-5,000/month, and 5kW+ for higher consumption. We recommend the optimal size during consultation.",
+    answer: "System size depends on your annual electricity consumption. Typically: 3kW for up to 4,000 units/year, 4kW for 4,000-6,000 units/year, and 5kW+ for higher consumption. We recommend the optimal size during consultation.",
   },
 ];
 
