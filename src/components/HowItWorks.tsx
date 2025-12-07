@@ -1,4 +1,4 @@
-import { ClipboardCheck, Home, Sun, Wrench } from "lucide-react";
+import { ClipboardCheck, FileText, Home, Sun, Wrench } from "lucide-react";
 
 const steps = [
   {
@@ -14,16 +14,22 @@ const steps = [
     description: "Our experts visit your location, analyze sun exposure, and design the optimal panel layout for maximum efficiency.",
   },
   {
-    icon: Wrench,
+    icon: FileText,
     step: "03",
+    title: "Documentation & Approvals",
+    description: "We handle all paperwork including subsidy applications, permits, and grid connection approvals.",
+  },
+  {
+    icon: Wrench,
+    step: "04",
     title: "Professional Installation",
     description: "Certified technicians install your system using premium equipment, ensuring safety and durability.",
   },
   {
     icon: Sun,
-    step: "04",
+    step: "05",
     title: "Power On & Support",
-    description: "We handle all paperwork, grid connection, and provide 3 years of free maintenance for peace of mind.",
+    description: "We complete grid connection and provide 3 years of free maintenance for peace of mind.",
   },
 ];
 
@@ -49,7 +55,7 @@ const HowItWorks = () => {
           {/* Connection Line - Desktop */}
           <div className="hidden lg:block absolute top-24 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-secondary/20 via-secondary to-secondary/20" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {steps.map((item, index) => (
               <div
                 key={index}
