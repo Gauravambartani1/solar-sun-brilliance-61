@@ -32,14 +32,16 @@ const HeroSection = () => {
 
           {/* CTA Button */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <Button 
-              variant="hero" 
-              size="xl"
-              onClick={() => window.open(`https://wa.me/918806660170?text=${encodeURIComponent("Hi! I'm interested in getting a solar installation for my home in Amravati. Please share more details.")}`, "_blank")}
+            <a 
+              href={`https://wa.me/918806660170?text=${encodeURIComponent("Hi! I'm interested in getting a solar installation for my home in Amravati. Please share more details.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Get Free Consultation
-              <ArrowRight className="h-5 w-5" />
-            </Button>
+              <Button variant="hero" size="xl">
+                Get Free Consultation
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </a>
           </div>
 
           {/* Stats */}
