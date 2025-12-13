@@ -1,23 +1,25 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
-export default defineConfig(({ mode }) => ({
-  server: {
-    host: true, // or "0.0.0.0"
-    port: 8080,
-    allowedHosts: [
-      "solar-sun-brilliance-61.onrender.com"
-    ],
-  },
+export default defineConfig({
   plugins: [
-    react(),
-    mode === "development" && componentTagger()
-  ].filter(Boolean),
+    react({
+      jsxImportSource: "react",
+      tsDecorators: true,
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+  server: {
+    host: true,
+    port: 8080,
+  },
+  preview: {
+    host: true,
+    port: 8080,
+  },
+});
